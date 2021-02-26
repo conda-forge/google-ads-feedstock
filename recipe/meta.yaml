@@ -19,6 +19,7 @@ requirements:
     - python >=3.7
     - pip
   run:
+    # keeping python above 3.7 so it can stay noarch: python and avoid pep562 dependency (only for py<=36)
     - python >=3.7
     - google-api-core >=1.14.0,<2.0.0
     - google-auth-oauthlib >=0.3.0,<1.0.0
