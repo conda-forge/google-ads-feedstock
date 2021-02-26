@@ -8,6 +8,9 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
   sha256: 75109496c0a4546d6312b560d75db0e80b66cce8a895dcd18e765ee831da3176
+  patches:
+   # to stay noarch: python and still pass pip check, we're taking out pep562
+   - 0001-remove-pep562-dependency.patch
 
 build:
   number: 0
@@ -19,7 +22,8 @@ requirements:
     - python >=3.7
     - pip
   run:
-    # keeping python above 3.7 so it can stay noarch: python and avoid pep562 dependency (only for py<=36)
+    # keeping python above 3.7 so it can stay noarch: python and avoid pep562
+    # dependency (only for py<=36)
     - python >=3.7
     - google-api-core >=1.14.0,<2.0.0
     - google-auth-oauthlib >=0.3.0,<1.0.0
