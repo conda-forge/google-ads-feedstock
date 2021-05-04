@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "10.0.0" %}
+{% set version = "11.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
-  sha256: 3b6276e7a975a4cfdc3e658dab77b01b5efaa8041823571a952fc20cbe6dd4d7
+  sha256: 989f0c80ffa7a73c1fe586a31ee6a3ae9c86b92f8ce4d96ec8c982cf8a5d198f
   patches:
    # to stay noarch: python and still pass pip check, we're taking out pep562
     - 0001-remove-pep562-dependency.patch
