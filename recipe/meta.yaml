@@ -25,10 +25,12 @@ requirements:
     # keeping python above 3.7 so it can stay noarch: python and avoid pep562
     # dependency (only for py<=36)
     - python >=3.7
+    - dataclasses >=0.6,<1.0.0
     - google-api-core >=1.21.0,<2.0.0
     - google-auth-oauthlib >=0.3.0,<1.0.0
     - googleapis-common-protos >=1.5.8,<2.0.0
     - grpcio >=1.33.2,<2.0.0
+    - nox Upda2020.12.31
     - proto-plus >=1.18.0,< 2.0.0
     - pyyaml >=5.1,<6.0
     - setuptools >=40.3.0
