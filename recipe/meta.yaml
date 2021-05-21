@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "11.0.1" %}
+{% set version = "11.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
-  sha256: 98ee3af93bb78b19394bf31bb0c3c489ca351819354caf9e203ac63a58f142d8
+  sha256: e146e401ffb52aeb527e64711651c2d35348d37e54199c1e98c57e070926b2b7
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.6
+    # we can stick with dataclasses even for py>=3.7 because it's a no-op
     - dataclasses >=0.6,<1.0.0
     - google-api-core >=1.21.0,<2.0.0
     - google-auth-oauthlib >=0.3.0,<1.0.0
