@@ -21,6 +21,9 @@ requirements:
   run:
     - python >=3.7
     - google-api-core >=1.31.2,<2.0.0
+    # temporary constraint to handle broken dependency in google-api-core 1.31.2
+    # updated incorrectly in https://github.com/conda-forge/google-api-core-feedstock/pull/74
+    - google-auth >=1.25.0,<2.0dev
     - google-auth-oauthlib >=0.3.0,<1.0.0
     - googleapis-common-protos >=1.5.8,<2.0.0
     - grpcio >=1.33.2,<2.0.0
