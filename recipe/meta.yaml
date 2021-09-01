@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "13.0.0" %}
+{% set version = "14.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
-  sha256: 172b25ffabd2f4926f4b300dff74f64692230609f8ca21a9e8780295ab23500b
+  sha256: c6879f1f84c408547e88906e3f021172eda48d9c7d678e7877c618efe5e6de5a
 
 build:
   number: 0
@@ -20,12 +20,15 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - google-api-core >=1.21.0,<2.0.0
+    - google-api-core >=1.31.2,<2.0.0
+    # temporary constraint to handle broken dependency in google-api-core 1.31.2
+    # updated incorrectly in https://github.com/conda-forge/google-api-core-feedstock/pull/74
+    - google-auth >=1.25.0,<2.0dev
     - google-auth-oauthlib >=0.3.0,<1.0.0
     - googleapis-common-protos >=1.5.8,<2.0.0
     - grpcio >=1.33.2,<2.0.0
     - nox 2020.12.31
-    - proto-plus >=1.18.0,< 2.0.0
+    - proto-plus 1.18.1
     - pyyaml >=5.1,<6.0
     - setuptools >=40.3.0
 
