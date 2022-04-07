@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "15.1.0" %}
+{% set version = "15.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
-  sha256: 7b8ba1cbc71789d46abee1dacc93dab43262fd549fb9cda59928ab61146302d3
+  sha256: d244a2911340434905cb6ed230319258579b27c1e278d0beecdca537f65424c2
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - grpcio >=1.38.1,<2.0.0
     - grpcio-status >=1.38.1,<2.0.0
     - proto-plus 1.19.6
-    - protobuf >=3.12.0,<3.18.0
+    - protobuf >=3.12.0,<=3.20.0,!=3.18.*,!=3.19.*
     - pyyaml >=5.1,<6.0
     - setuptools >=40.3.0
 
