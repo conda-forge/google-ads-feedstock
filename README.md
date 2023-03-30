@@ -1,11 +1,11 @@
-About google-ads
-================
+About google-ads-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-ads-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/googleads/google-ads-python
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-ads-feedstock/blob/main/LICENSE.txt)
 
 Summary: Client library for the Google Ads API
 
