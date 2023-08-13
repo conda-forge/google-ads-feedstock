@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "21.2.0" %}
+{% set version = "21.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-ads-{{ version }}.tar.gz
-  sha256: d155a82d69700ae7c509aa62c789f34f260ac7f12db488a95a3a297e45d868b9
+  sha256: bd4fcb6bd5e55bace413e889e82012d48578aa28f7b4d726c86e2d594c753c6c
 
 build:
   number: 0
@@ -21,11 +21,11 @@ requirements:
   run:
     - python >=3.7
     - google-auth-oauthlib >=0.3.0,<2.0.0
-    - google-api-core >=2.8.0,<=2.11.0
+    - google-api-core >=2.8.0,<=3.0.0
     - googleapis-common-protos >=1.56.0,<2.0.0
     - grpcio >=1.38.1,<2.0.0
     - grpcio-status >=1.38.1,<2.0.0
-    - proto-plus >=1.19.6,<1.23
+    - proto-plus >=1.19.6,<2.0.0
     - pyyaml >=5.1,<7.0
     - setuptools >=40.3.0
     - protobuf >=3.12.0,<5.0.0dev,!=3.18.*,!=3.19.*
