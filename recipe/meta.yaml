@@ -12,12 +12,13 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python >=3.7,<3.12
     - pip
+    - setuptools
   run:
     - python >=3.7,<3.12
     - google-auth-oauthlib >=0.3.0,<2.0.0
