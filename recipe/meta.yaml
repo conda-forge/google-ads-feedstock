@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7,<3.12
+    - python >=3.8,<3.13
     - pip
     - setuptools
   run:
-    - python >=3.7,<3.12
+    - python >=3.8,<3.13
     - google-auth-oauthlib >=0.3.0,<2.0.0
     - google-api-core >=2.13.0,<=3.0.0
     - googleapis-common-protos >=1.56.3,<2.0.0
@@ -28,7 +28,6 @@ requirements:
     - grpcio-status >=1.59.0,<2.0.0
     - proto-plus >=1.22.3,<2.0.0
     - pyyaml >=5.1,<7.0
-    - setuptools >=40.3.0
     - protobuf >=4.25.0,<6.0.0
 
 test:
