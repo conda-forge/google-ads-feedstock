@@ -20,7 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
     - google-api-core >=2.13.0,<=3.0.0
     - googleapis-common-protos >=1.56.3,<2.0.0
