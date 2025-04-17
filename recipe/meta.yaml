@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "26.0.1" %}
+{% set version = "26.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_ads-{{ version }}.tar.gz
-  sha256: 189d700da886d40b6df0d04e80acc3f66b7577448065224385f500eba3a45a09
+  sha256: 3ec4cc8ad07f71c923433bd2a783afc59acd5d428ed75bcc64f8ecaa5b3d8691
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
-    - python >={{ python_min }},<3.13
+    - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
     - google-api-core >=2.13.0,<=3.0.0
     - googleapis-common-protos >=1.56.3,<2.0.0
