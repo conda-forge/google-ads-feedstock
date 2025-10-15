@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "28.0.0" %}
+{% set version = "28.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_ads-{{ version }}.tar.gz
-  sha256: 0b50bef4a12b8a986edec91f504427ee464ff58ecc5abcf189a0a0539c9b3815
+  sha256: 73fef56778aca36c65e8d173875a723228c70bab61f7147b35dc63b619e1362f
 
 build:
   number: 0
