@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "28.1.0" %}
+{% set version = "28.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_ads-{{ version }}.tar.gz
-  sha256: 73fef56778aca36c65e8d173875a723228c70bab61f7147b35dc63b619e1362f
+  sha256: f4e7a3eff429799f64fdc82e0e141b0cb31f774bf598ce31b2034b3e3f48081f
 
 build:
   number: 0
@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    # unlike upstream, we're not yet ready for python 3.14 because conda-forge doesn't yet have grpcio 1.75.1
     - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
     - google-api-core >=2.13.0,<=3.0.0
