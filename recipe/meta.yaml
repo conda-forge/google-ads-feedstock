@@ -20,6 +20,7 @@ requirements:
     - pip
     - setuptools
   run:
+    # unlike upstream, we're not yet ready for python 3.14 because conda-forge doesn't yet have grpcio 1.75.1
     - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
     - google-api-core >=2.13.0,<=3.0.0
