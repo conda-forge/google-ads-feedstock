@@ -1,5 +1,5 @@
 {% set name = "google-ads" %}
-{% set version = "28.2.0" %}
+{% set version = "28.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/google_ads-{{ version }}.tar.gz
-  sha256: f4e7a3eff429799f64fdc82e0e141b0cb31f774bf598ce31b2034b3e3f48081f
+  sha256: d544e7e3792974e9dc6a016e0eb264f9218526be698c8c6b8a438717a6dcc95b
 
 build:
   number: 0
@@ -23,13 +23,18 @@ requirements:
     # unlike upstream, we're not yet ready for python 3.14 because conda-forge doesn't yet have grpcio 1.75.1
     - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
-    - google-api-core >=2.13.0,<=3.0.0
-    - googleapis-common-protos >=1.56.3,<2.0.0
-    - grpcio >=1.59.0,<2.0.0
-    - grpcio-status >=1.59.0,<2.0.0
-    - proto-plus >=1.22.3,<2.0.0
+    # strictest constraint for python >=3.13
+    - google-api-core >=2.22.0,<=3.0.0
+    # strictest constraint for python >=3.13
+    - googleapis-common-protos >=1.63.2,<2.0.0
+    # strictest constraint for python >=3.13    
+    - grpcio >=1.66.2,<2.0.0
+    - grpcio-status >=1.66.2,<2.0.0
+    # strictest constraint for python >=3.13    
+    - proto-plus >=1.25.0,<2.0.0
     - pyyaml >=5.1,<7.0
-    - protobuf >=4.25.0,<7.0.0
+    # strictest constraint for python >=3.13    
+    - protobuf >=5.26.1,<7.0.0
 
 test:
   imports:
