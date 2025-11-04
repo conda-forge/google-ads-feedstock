@@ -24,17 +24,17 @@ requirements:
     - python >={{ python_min }},<3.14
     - google-auth-oauthlib >=1.0.0,<2.0.0
     # strictest constraint for python >=3.13
-    - google-api-core >=2.13.0,<=3.0.0
+    - google-api-core >=2.22.0,<=3.0.0
     # strictest constraint for python >=3.13
-    - googleapis-common-protos >=1.56.3,<2.0.0
+    - googleapis-common-protos >=1.63.2,<2.0.0
     # strictest constraint for python >=3.13    
-    - grpcio >=1.59.0,<2.0.0
-    - grpcio-status >=1.59.0,<2.0.0
+    - grpcio >=1.66.2,<2.0.0
+    - grpcio-status >=1.66.2,<2.0.0
     # strictest constraint for python >=3.13    
-    - proto-plus >=1.22.3,<2.0.0
+    - proto-plus >=1.25.0,<2.0.0
     - pyyaml >=5.1,<7.0
     # strictest constraint for python >=3.13    
-    - protobuf >=4.25.0,<7.0.0
+    - protobuf >=5.26.1,<7.0.0
 
 test:
   imports:
