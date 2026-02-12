@@ -44,13 +44,8 @@ tests:
       imports:
         - google
         - google.ads
+      pip_check: true
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
 
 about:
   summary: Client library for the Google Ads API
