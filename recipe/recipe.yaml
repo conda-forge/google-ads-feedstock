@@ -1,0 +1,60 @@
+schema_version: 1
+
+context:
+  name: google-ads
+  version: 29.1.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_ads-${{ version }}.tar.gz
+  sha256: 7301c88d2f72e0e9fdfd6c86818781bd242a30ed11fce1230ba1f929e7131c9a
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - google-auth-oauthlib >=1.0.0,<2.0.0
+    # strictest constraint for python >=3.13
+    - google-api-core >=2.22.0,<=3.0.0
+    # strictest constraint for python >=3.13
+    - googleapis-common-protos >=1.63.2,<2.0.0
+    # strictest constraint for python >=3.14
+    - grpcio >=1.75.1,<2.0.0
+    # strictest constraint for python >=3.14
+    - grpcio-status >=1.75.1,<2.0.0
+    # strictest constraint for python >=3.13
+    - proto-plus >=1.25.0,<2.0.0
+    - pyyaml >=5.1,<7.0
+    # strictest constraint for python >=3.13
+    - protobuf >=5.26.1,<7.0.0
+
+tests:
+  - python:
+      imports:
+        - google
+        - google.ads
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Client library for the Google Ads API
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/googleads/google-ads-python
+  repository: https://github.com/googleads/google-ads-python
+  documentation: https://developers.google.com/google-ads/api/docs/start
+
+extra:
+  recipe-maintainers:
+    - xylar
