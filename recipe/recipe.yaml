@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-ads
-  version: "31.2.0"
+  version: "31.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_ads-${{ version }}.tar.gz
-  sha256: 7099181c1a7f627739b5c69cf86472bab462fccb743ec7659e252fb87fa1a7da
+  sha256: 8f42581e9db633562e2664fd0e583af7c6064d6a2e991a6910c4b5c9cd30b28d
 
 build:
   number: 0
@@ -25,18 +25,18 @@ requirements:
   run:
     - python >=${{ python_min }}
     - google-auth-oauthlib >=1.0.0,<2.0.0
-    # strictest constraint for python >=3.13
+    # tightest of upstream's floors (python >=3.13)
     - google-api-core >=2.22.0,<=3.0.0
-    # strictest constraint for python >=3.13
+    # tightest of upstream's floors (python >=3.13)
     - googleapis-common-protos >=1.63.2,<2.0.0
-    # strictest constraint for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - grpcio >=1.75.1,<2.0.0
-    # strictest constraint for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - grpcio-status >=1.75.1,<2.0.0
-    # strictest constraint for python >=3.13
+    # tightest of upstream's floors (python >=3.13)
     - proto-plus >=1.25.0,<2.0.0
     - pyyaml >=5.1,<7.0
-    # strictest lower bound for python >=3.13; upper bound from python >=3.10
+    # tightest of upstream's floors (python >=3.13) and ceilings (python >=3.10)
     - protobuf >=5.26.1,<8.0.0
 
 tests:
@@ -45,7 +45,9 @@ tests:
         - google
         - google.ads
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: Client library for the Google Ads API
