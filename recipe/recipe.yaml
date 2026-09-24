@@ -36,7 +36,7 @@ requirements:
     # tightest of upstream's floors (python >=3.13)
     - proto-plus >=1.25.0,<2.0.0
     - pyyaml >=5.1,<7.0
-    # tightest of upstream's floors (python >=3.13) and ceilings (python >=3.10)
+    # tightest of upstream's floors (python >=3.13)
     - protobuf >=5.26.1,<8.0.0
 
 tests:
