@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-ads
-  version: "32.0.0"
+  version: "33.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_ads-${{ version }}.tar.gz
-  sha256: ceddefd1d927b6c5cfb2c4c8c7e546c0f2dc7cc9b0fc2b5c6b51a49d93d1aeec
+  sha256: d58309f22943b613f66250a231eba677af7963f3cec91e6d11620c7b402058ce
 
 build:
   number: 0
@@ -36,7 +36,7 @@ requirements:
     # tightest of upstream's floors (python >=3.13)
     - proto-plus >=1.25.0,<2.0.0
     - pyyaml >=5.1,<7.0
-    # tightest of upstream's floors (python >=3.13) and ceilings (python >=3.10)
+    # tightest of upstream's floors (python >=3.13)
     - protobuf >=5.26.1,<8.0.0
 
 tests:
