@@ -25,19 +25,15 @@ requirements:
   run:
     - python >=${{ python_min }}
     - google-auth-oauthlib >=1.0.0,<2.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - google-api-core >=2.22.0,<=3.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - googleapis-common-protos >=1.63.2,<2.0.0
+    - google-api-core >=2.41.0,<=3.0.0
+    - googleapis-common-protos >=1.69.2,<2.0.0
     # tightest of upstream's floors (python >=3.14)
     - grpcio >=1.75.1,<2.0.0
     # tightest of upstream's floors (python >=3.14)
     - grpcio-status >=1.75.1,<2.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - proto-plus >=1.25.0,<2.0.0
+    - proto-plus >=1.26.1,<2.0.0
     - pyyaml >=5.1,<7.0
-    # tightest of upstream's floors (python >=3.13)
-    - protobuf >=5.26.1,<8.0.0
+    - protobuf >=6.33.5,<8.0.0
 
 tests:
   - python:
