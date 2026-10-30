@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-ads
-  version: "34.0.0"
+  version: "35.0.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_ads-${{ version }}.tar.gz
-  sha256: 6a46e752702fb64dfc710b84c59b40bfaeb6b8f76d64e1c8b6d1e58be6df3615
+  sha256: eae070dc46e2c1212eb8352313527b0f6632cfcc8919c065ac3e00df9298dc85
 
 build:
   number: 0
@@ -25,19 +25,15 @@ requirements:
   run:
     - python >=${{ python_min }}
     - google-auth-oauthlib >=1.0.0,<2.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - google-api-core >=2.22.0,<=3.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - googleapis-common-protos >=1.63.2,<2.0.0
+    - google-api-core >=2.41.0,<=3.0.0
+    - googleapis-common-protos >=1.69.2,<2.0.0
     # tightest of upstream's floors (python >=3.14)
     - grpcio >=1.75.1,<2.0.0
     # tightest of upstream's floors (python >=3.14)
     - grpcio-status >=1.75.1,<2.0.0
-    # tightest of upstream's floors (python >=3.13)
-    - proto-plus >=1.25.0,<2.0.0
+    - proto-plus >=1.26.1,<2.0.0
     - pyyaml >=5.1,<7.0
-    # tightest of upstream's floors (python >=3.13)
-    - protobuf >=5.26.1,<8.0.0
+    - protobuf >=6.33.5,<8.0.0
 
 tests:
   - python:
