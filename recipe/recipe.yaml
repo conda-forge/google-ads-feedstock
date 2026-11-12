@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-ads
-  version: "35.0.0"
+  version: "35.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/google_ads-${{ version }}.tar.gz
-  sha256: eae070dc46e2c1212eb8352313527b0f6632cfcc8919c065ac3e00df9298dc85
+  sha256: 374c22f9ff204879e51b5efb4768f2bd316727f15ef2f70679910a45a69bbaac
 
 build:
   number: 0
